@@ -1,0 +1,32 @@
+{
+  "name": "my-first-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build:macos": "build --macos --dir",
+    "dist:macos": "build --macos",
+    "build:linux": "build --linux --dir",
+    "dist:linux": "build --linux",
+    "build:windows": "build --win --dir",
+    "dist:windows": "build --win"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^4.0.3",
+    "electron-builder": "^20.38.5"
+  },
+  "build": {
+    "appId": "com.my.app.id",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "linux": {
+      "category": "Utility"
+    }
+  }
+}
