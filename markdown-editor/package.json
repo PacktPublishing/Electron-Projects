@@ -1,0 +1,30 @@
+{
+  "name": "markdown-editor",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "DEBUG=true electron .",
+    "build:macos": "build --macos --dir",
+    "publish:github": "build --mac -p always"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.0.5",
+    "electron-builder": "^20.38.5"
+  },
+  "dependencies": {
+    "electron-updater": "^4.0.6",
+    "simplemde": "^1.11.2"
+  },
+  "build": {
+    "appId": "com.my.markdown-editor",
+    "publish": {
+      "provider": "github",
+      "owner": "<account>",
+      "repo": "electron-updates"
+    }
+  }
+}
