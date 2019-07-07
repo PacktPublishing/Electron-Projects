@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="player.css" />
+  </head>
+  <body>
+    <img class="cover-image" data-amplitude-song-info="cover_art_url" />
+
+    <div class="song-progress-container">
+      <div>
+        <span class="amplitude-current-minutes"></span>:<span
+          class="amplitude-current-seconds"
+        ></span>
+      </div>
+
+      <progress class="amplitude-song-played-progress"></progress>
+
+      <div>
+        <span class="amplitude-duration-minutes"></span>:<span
+          class="amplitude-duration-seconds"
+        ></span>
+      </div>
+    </div>
+
+    <div class="song-info-container">
+      <div data-amplitude-song-info="name"></div>
+      <div data-amplitude-song-info="album"></div>
+      <div data-amplitude-song-info="artist"></div>
+    </div>
+
+    <div class="controls">
+      <div class="amplitude-play-pause"></div>
+      <div class="amplitude-stop"></div>
+      <div class="amplitude-mute"></div>
+      <input type="range" class="amplitude-volume-slider" />
+    </div>
+
+    <script src="./node_modules/amplitudejs/dist/amplitude.js"></script>
+    <script src="./player.js"></script>
+  </body>
+</html>
