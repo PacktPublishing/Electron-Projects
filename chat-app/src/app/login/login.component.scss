@@ -1,0 +1,22 @@
+.login-form-container {
+  display: flex;
+
+  .error {
+    color: red;
+  }
+
+  .login-form {
+    margin: auto;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+
+    .login-field {
+      width: 100%;
+    }
+
+    .login-actions {
+      text-align: right;
+    }
+  }
+}

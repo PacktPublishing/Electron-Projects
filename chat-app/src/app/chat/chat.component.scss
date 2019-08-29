@@ -1,0 +1,7 @@
+.mat-list-item {
+  cursor: pointer;
+
+  &:hover h4 {
+    text-decoration: underline;
+  }
+}

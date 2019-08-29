@@ -1,0 +1,23 @@
+<div class="login-form-container">
+  <div class="login-form">
+    <h1>Login</h1>
+    <h2 class="error" *ngIf="error">Error: {{ error }}</h2>
+
+    <mat-form-field class="login-field">
+      <input #loginField matInput placeholder="Username" autocomplete="off" />
+    </mat-form-field>
+
+    <mat-form-field class="login-field">
+      <input #passwordField type="password" matInput placeholder="Password" />
+    </mat-form-field>
+
+    <div class="login-actions">
+      <button
+        mat-raised-button
+        (click)="login(loginField.value, passwordField.value)"
+      >
+        Login
+      </button>
+    </div>
+  </div>
+</div>
