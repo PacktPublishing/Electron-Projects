@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: 'AIzaSyDPgAiN7dFqjp17HVFRWT2QaChHx5oGeBo',
-    authDomain: 'electron-chat-app-df7eb.firebaseapp.com',
-    databaseURL: 'https://electron-chat-app-df7eb.firebaseio.com',
-    projectId: 'electron-chat-app-df7eb',
-    storageBucket: '',
-    messagingSenderId: '610931503152',
-    appId: '1:610931503152:web:f2ccc78969eb58a3'
+    apiKey: '<Your Value>',
+    authDomain: '<Your Value>',
+    databaseURL: '<Your Value>',
+    projectId: '<Your Value>',
+    storageBucket: '<Your Value>',
+    messagingSenderId: '<Your Value>',
+    appId: '<Your Value>'
   }
 };
 
