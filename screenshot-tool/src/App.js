@@ -4,9 +4,8 @@ import { Navbar, Button, Alignment, Icon } from '@blueprintjs/core';
 
 function App() {
   const onSnipClick = async () => {
-    const { desktopCapturer, screen, shell, remote } = window.require(
-      'electron'
-    );
+    const { desktopCapturer, shell, remote } = window.require('electron');
+    const screen = remote.screen;
     const path = window.require('path');
     const os = window.require('os');
     const fs = window.require('fs');
@@ -28,7 +27,7 @@ function App() {
       });
 
       const entireScreenSource = sources.find(
-        source => source.name === 'Entire screen' || source.name === 'Screen 1'
+        source => source.name === 'Entire Screen' || source.name === 'Screen 1'
       );
 
       if (entireScreenSource) {
@@ -45,9 +44,13 @@ function App() {
         fs.writeFile(outputPath, image, err => {
           // win.show();
 
-          if (err) return console.error(err);
+          if (err) {
+            return console.error(err);
+          }
           shell.openExternal(`file://${outputPath}`);
         });
+      } else {
+        window.alert('Screen source not found.');
       }
     } catch (err) {
       console.error(err);
