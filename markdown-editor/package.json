@@ -5,18 +5,18 @@
   "main": "index.js",
   "scripts": {
     "start": "DEBUG=true electron .",
-    "build:macos": "build --macos --dir",
-    "publish:github": "build --mac -p always"
+    "build:macos": "electron-builder --macos --dir",
+    "publish:github": "electron-builder --mac -p always"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^4.0.5",
-    "electron-builder": "^20.38.5"
+    "electron": "^6.0.12",
+    "electron-builder": "^21.2.0"
   },
   "dependencies": {
-    "electron-updater": "^4.0.6",
+    "electron-updater": "^4.1.2",
     "simplemde": "^1.11.2"
   },
   "build": {
