@@ -3,6 +3,7 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const { exec } = require('child_process');
+const { shell } = require('electron');
 
 ipcMain.on('save', (_, contents) => {
   saveFile(contents);
@@ -34,7 +35,8 @@ function generateEPUB(contents) {
     const command = `docker run -v ${filePath}:/source denysvuika/pandoc -f markdown ${name}.md -o ${name}.epub`;
     exec(command, () => {
       const outputPath = path.join(filePath, `${name}.epub`);
-      exec(`open ${outputPath}`).stderr.pipe(process.stderr);
+      // exec(`open ${outputPath}`).stderr.pipe(process.stderr);
+      shell.openItem(outputPath);
     }).stderr.pipe(process.stderr);
   });
 }
