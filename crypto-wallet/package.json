@@ -5,7 +5,6 @@
   "main": "main.js",
   "dependencies": {
     "antd": "^3.23.2",
-    "electron": "^6.0.9",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1",
@@ -16,7 +15,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "pack-app": "electron-builder --dir",
+    "dist-app": "electron-builder"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,5 +33,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "electron": "^7.1.1",
+    "electron-builder": "^22.1.0"
   }
 }
