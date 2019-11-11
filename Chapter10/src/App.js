@@ -44,7 +44,25 @@ function App() {
         setAccounts(accounts);
       }
     });
-  });
+
+    if (window.require) {
+      const electron = window.require('electron');
+      const ipcRenderer = electron.ipcRenderer;
+
+      const showNodeInfo = (_, command) => {
+        if (command === 'show-node-info') {
+          window.alert(`Node: ${node}`);
+        }
+      }
+  
+      ipcRenderer.on('commands', showNodeInfo);
+      
+      return () => {
+        ipcRenderer.off('commands', showNodeInfo);
+      }
+    }
+
+  }, [node]);
 
   const formatAccountName = name => {
     if (name && name.length > 10) {
