@@ -7,7 +7,7 @@ npm install
 npm start
 ```
 
-Available NPM scripts
+# Available NPM scripts
 
 | Script | Description |
 | --- | --- |
