@@ -1,29 +1,17 @@
-# integrate-vue
+# Chapter 3: Integrating Electron applications with Angular, React, and Vue / Vue
 
-## Project setup
-```
+## Installing
+
+```sh
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
+## Running
+
+```sh
+# terminal 1: run local web server
 npm run serve
-```
 
-### Compiles and minifies for production
+# terminal 2: run electron app
+npm start
 ```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
