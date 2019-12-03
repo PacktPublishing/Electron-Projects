@@ -4,7 +4,7 @@
 
 This is the code repository for [Electron Projects](https://www.packtpub.com/mobile/electron-projects?utm_source=github&utm_medium=repository&utm_campaign=9781838552206), published by Packt.
 
-**Build over 9 cross-platform desktop applications from scratch	**
+**Build over 9 cross-platform desktop applications from scratch**
 
 ## What is this book about?
 The Electron framework allows you to use modern web technologies to build applications that share the same code across all operating systems and platforms. This also helps designers to easily transition from the web to the desktop. Electron Projects guides you through building cross-platform Electron apps with modern web technologies and JavaScript frameworks such as Angular, React.js, and Vue.js.
