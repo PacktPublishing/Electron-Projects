@@ -50,8 +50,7 @@ With the following software and hardware list you can run all code files present
 | 1 - 10       | Node.js                    | Windows, Mac OS X, and Linux (Any) |
 | 1 - 10        | Visual Studio Code            | Windows, Mac OS X, and Linux (Any) |
 | 3        | Vue CLI            | Windows, Mac OS X, and Linux (Any) |
-| 3        | Angular CLI
-            | Windows, Mac OS X, and Linux (Any) |
+| 3        | Angular CLI | Windows, Mac OS X, and Linux (Any) |
 | 9        | Docker Desktop Community            | Windows, Mac OS X, and Linux (Any) |
 | 10        | Ganache            | Windows, Mac OS X, and Linux (Any) |
 
