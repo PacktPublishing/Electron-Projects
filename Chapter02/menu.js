@@ -19,19 +19,18 @@ function saveFile() {
 
 function loadFile() {
   const window = BrowserWindow.getFocusedWindow();
-  const options = {
-    title: 'Pick a markdown file',
-    filters: [
-      { name: 'Markdown files', extensions: ['md'] },
-      { name: 'Text files', extensions: ['txt'] }
-    ]
-  };
-  dialog.showOpenDialog(window, options, paths => {
-    if (paths && paths.length > 0) {
-      const content = fs.readFileSync(paths[0]).toString();
-      window.webContents.send('load', content);
-    }
+  const files = dialog.showOpenDialogSync(window, {
+      properties: ['openFile'],
+      title: 'Pick a markdown file',
+      filters: [{ name: 'Markdown', extensions: ['md', 'markdown','txt'] }]
+
   });
+  if (!files) return;
+
+  const file = files[0];
+  const fileContent = fs.readFileSync(file).toString();
+  console.log(fileContent);
+  window.webContents.send('load', fileContent);
 }
 
 app.on('ready', () => {
