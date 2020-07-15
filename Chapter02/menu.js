@@ -58,12 +58,11 @@ ipcMain.on('save', (event, arg) => {
     ]
   };
 
-  dialog.showSaveDialog(window, options, filename => {
-    if (filename) {
-      console.log(`Saving content to the file: ${filename}`);
-      fs.writeFileSync(filename, arg);
-    }
-  });
+  const filename = dialog.showSaveDialogSync(window, options);
+  if (filename) {
+    console.log(`Saving content to the file: ${filename}`);
+    fs.writeFileSync(filename, arg);
+  }
 });
 
 ipcMain.on('editor-reply', (event, arg) => {
